@@ -1,2 +1,6 @@
 # advent_of_code_2020
-Advent of Code 2020 Puzzle Submissions
+
+"Advent of Code is an Advent calendar of small programming puzzles for a variety of skill sets and skill levels that can be solved in any programming language you like."
+- https://adventofcode.com/2020/about
+
+2020 Submission Language: Javascript
