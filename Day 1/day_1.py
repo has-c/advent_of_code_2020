@@ -4,6 +4,8 @@ Author: Hasnain Cheena
 Date: 1/12/2020
 """
 
+from itertools import combinations 
+
 def day_1_part_1():
     #open file and read data
     with open("data.txt", "r+") as work_data:
@@ -27,16 +29,23 @@ def day_1_part_1():
 
 def day_1_part_2():
     #open file and read data
-    with open("test_data.txt", "r+") as work_data:
+    with open("data.txt", "r+") as work_data:
         line_data = work_data.readlines()
 
     #convert str to int 
     expenses = [int(line.strip("\n")) for line in line_data]
 
     #find three entries that sum to 2020
-    result_found = False
-    while not(result_found):
-        
+    # while not(result_found):
+    possible_combinations = combinations(expenses, 3)  
+    for combination in possible_combinations:
+        if sum(combination) == 2020:
+            product = combination[0] * combination[1] * combination[2]
+            break
+
+    print(product)
+
+
 
 def main():
     day_1_part_1()
